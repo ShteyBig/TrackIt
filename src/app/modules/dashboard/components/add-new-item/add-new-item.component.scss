@@ -1,0 +1,25 @@
+.card {
+    display: inline-block;
+    height: 150px;
+    width: 120px;
+    border: 2px black dashed;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px 15px;
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: blue;
+    border: 2px gray dashed;
+    i {
+        color: white;
+    }
+}
+
+.card > i {
+    position: absolute;
+    top: 33%;
+    left: 30%;
+    font-size: 50px;
+}

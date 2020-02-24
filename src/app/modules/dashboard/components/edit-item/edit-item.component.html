@@ -1,0 +1,66 @@
+<div class="wrapper">
+    <h1>Add new card</h1>
+
+    <div class="fields-container">
+        <div class="main-fields">
+            <div class="task-name">
+                <p>Task name:</p>
+                <mat-form-field [formGroup]="taskForm">
+                <input matInput type="text" placeholder="Task name" formControlName="address">
+                <mat-error *ngIf="hasError('address', 'required')">Task name is required</mat-error>
+                <mat-error *ngIf="hasError('address', 'maxlength')">You can't have more than 100 characters</mat-error>
+            </mat-form-field>
+        </div>
+
+        <div class="task-asignee">
+                <p>Asignee:</p>
+                <mat-form-field>
+                    <mat-select [formControl]="toppings" multiple>
+                        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="task-duration">
+                <p>Due time:</p>
+                <mat-form-field>
+                    <input matInput [matDatepicker]="picker3" [value]="date.value">
+                    <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+                    <mat-datepicker #picker3></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <div class="task-respons-team">
+                <p>Responsible team:</p>
+                <mat-form-field>
+                    <mat-select [formControl]="toppings" multiple>
+                        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{topping}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="task-background">
+                <p>Card background:</p>
+
+                <mat-form-field>
+                    <mat-select [formControl]="backgroundColor">
+                        <mat-option *ngFor="let color of backgroundColorList" [value]="backgroundColor">{{color}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button mat-button class="cancel-button" mat-dialog-close>
+            Cancel
+        </button>
+        <button mat-button class="confirm-button" (click)="setRecipeName(newName)">
+            Confirm Editing
+        </button>
+    </div>
+</div>
+<!-- <div class="main-field__edit" (mouseover)="changeText=true" (mouseout)="changeText=false">
+    <span *ngIf="!changeText">Hide</span>
+    <span *ngIf="changeText"><input type="text" autofocus></span>
+</div> -->

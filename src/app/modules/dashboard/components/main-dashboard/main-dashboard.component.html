@@ -1,0 +1,7 @@
+<div class="container">
+    <app-add-new-item></app-add-new-item>
+    
+    <div class="card-added" *ngFor="let item of cards" (click)="openDescription()">
+        {{item}}
+    </div>
+</div>

@@ -1,0 +1,23 @@
+.wrapper {
+    width: 500px;
+}
+
+.main-fields>* {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fields-container>* {
+    flex: 1 1 160px;
+    margin: 0px 6%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.button-container {
+    margin-top: 15px;
+    text-align: center;
+}
