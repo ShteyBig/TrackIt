@@ -10,7 +10,7 @@ import { DashboardItemDescriptionComponent } from '../dashboard-item-description
 export class MainDashboardComponent implements OnInit {
 
   cards = [];
-  itemDescription: MatDialogRef<DashboardItemDescriptionComponent>;
+  public itemDescription: MatDialogRef<DashboardItemDescriptionComponent>;
   constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
