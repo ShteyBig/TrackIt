@@ -29,6 +29,6 @@ import { BrowserModule } from '@angular/platform-browser';
     DashboardItemDescriptionComponent,
     EditItemComponent
   ],
-  exports: [MainDashboardComponent]
+  exports: [...dashboardComponents]
 })
 export class DashboardModule { }
